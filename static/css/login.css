@@ -356,3 +356,81 @@ line-height:1.1;
 
     margin-bottom:15px;
 }
+
+@media(max-width:768px){
+
+    .container{
+        flex-direction:column;
+        width:100%;
+        min-height:auto;
+        border-radius:0;
+    }
+
+    .left-panel,
+    .right-panel{
+        width:100%;
+    }
+
+    .left-panel{
+        padding:30px;
+    }
+
+    .left-panel h1{
+        font-size:42px;
+    }
+
+    .subtitle{
+        font-size:16px;
+    }
+
+    .features{
+        gap:12px;
+    }
+
+    .illustration img{
+        max-width:220px;
+    }
+
+    .form-box{
+        width:90%;
+        max-width:none;
+        margin:30px auto;
+        padding:25px;
+    }
+
+    .form-box h2{
+        font-size:36px;
+    }
+
+    .input-group input{
+        height:50px;
+        font-size:16px;
+    }
+    .feature-box{
+        width:100%;
+    }
+.illustration{
+        display:none;
+    }
+
+    .login-card{
+        width:100%;
+        max-width:100%;
+        padding:25px;
+    }
+
+    input{
+        width:100%;
+    }
+}
+@media(max-width:768px){
+
+    .features{
+        display:none;
+    }
+
+    .illustration{
+        display:none;
+    }
+
+}
