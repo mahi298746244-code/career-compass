@@ -1,0 +1,115 @@
+ <!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Career Compass</title>
+
+```
+<link rel="stylesheet"
+      href="{{ url_for('static', filename='css/login.css') }}">
+```
+
+</head>
+
+<body>
+
+<div class="container">
+
+```
+<!-- LEFT SIDE -->
+
+<div class="left-panel">
+
+    <div class="logo">
+         Career Compass 🚀
+    </div>
+
+    <h1>
+        Navigate <br>
+        Your Future
+    </h1>
+
+    <p class="subtitle">
+        Discover the right tech career path, explore internship opportunities,
+        and get personalized guidance for your future.
+    </p>
+
+    <div class="features">
+
+        <div class="feature">
+            <span>🎯</span>
+            <p>Career Guidance</p>
+        </div>
+
+        <div class="feature">
+            <span>💼</span>
+            <p>Internship Opportunities</p>
+        </div>
+
+        <div class="feature">
+            <span>📚</span>
+            <p>skills Development</p>
+        </div>
+
+    </div>
+
+    <div class="illustration">
+        <img src="{{ url_for('static', filename='images/girlimage.jpg') }}"
+             alt="Career Illustration">
+    </div>
+
+</div>
+
+<!-- RIGHT SIDE -->
+
+<div class="right-panel">
+
+    <div class="form-box">
+        
+
+        <h2>Welcome Back </h2>
+
+        <p class="form-subtitle">
+            Login to continue your career journey
+        </p>
+
+        <form action="/login" method="POST">
+
+            <div class="input-group">
+                <label>Email Address</label>
+                <input type="email"
+                       name="email"
+                       placeholder="Enter your email"
+                       required>
+            </div>
+
+            <div class="input-group">
+                <label>Password</label>
+                <input type="password"
+                       name="password"
+                       placeholder="Enter your password"
+                       required>
+            </div>
+
+            <button type="submit" class="login-btn">
+                Login
+            </button>
+
+        </form>
+
+        <div class="register-link">
+            Don't have an account?
+            <a href="/register">Register</a>
+        </div>
+
+    </div>
+
+</div>
+```
+
+</div>
+
+</body>
+</html>

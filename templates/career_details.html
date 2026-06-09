@@ -1,0 +1,55 @@
+ <!DOCTYPE html>
+
+<html>
+<head>
+
+<title>Career Details</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static',
+filename='css/career_details.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+```
+<h1>{{ career_name }}</h1>
+
+<div class="details-card">
+
+    <h3>💰 Salary</h3>
+    <p>{{ career.salary }}</p>
+
+    <h3>🛠 Skills Required</h3>
+    <p>{{ career.skills }}</p>
+
+    <h3>🏢 Top Companies</h3>
+    <p>{{ career.companies }}</p>
+
+    <h3>🗺 Career Roadmap</h3>
+
+    <ul>
+        <li>Learn Fundamentals</li>
+        <li>Build Projects</li>
+        <li>Complete Internships</li>
+        <li>Create Portfolio</li>
+        <li>Apply For Jobs</li>
+    </ul>
+
+</div>
+
+<a href="/dashboard"
+   class="back-btn">
+
+   ← Back
+
+</a>
+```
+
+</div>
+
+</body>
+</html>

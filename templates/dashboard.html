@@ -1,0 +1,221 @@
+ <!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Compass Dashboard</title>
+
+<link rel="stylesheet"
+      href="{{ url_for('static', filename='css/dashboard.css') }}">
+
+</head>
+
+<body>
+
+<div class="dashboard-container">
+
+
+<!-- Sidebar -->
+
+<aside class="sidebar">
+
+    <div class="logo">
+        🚀 Career Compass
+    </div>
+
+    <ul class="menu">
+        <li class="active">🏠 Dashboard</li>
+        <li>⭐ Recommendations</li>
+        <li>📚 Saved Careers</li>
+        <li>
+    <a href="/profile">👤 Profile</a>
+</li>
+        <li>📖 Resources</li>
+        <li>
+    <a href="/logout">🚪 Logout</a>
+</li>
+    </ul>
+
+    <div class="sidebar-card">
+        <h3>✨ Keep Exploring!</h3>
+        <p>Your dream career is waiting for you.</p>
+    </div>
+
+    
+
+</aside>
+
+<!-- Main Content -->
+
+<main class="main-content">
+
+    <section class="welcome-section">
+
+    <div class="welcome-left">
+
+        <h1>Welcome Back 👋</h1>
+
+        <p>
+            Discover the perfect career path based on
+            your interests and skills.
+        </p>
+
+    </div>
+
+    <div class="welcome-right">
+
+        <div class="profile-box">
+
+            <div class="avatar">
+                {{ name[0] }}
+            </div>
+
+            <div>
+                <small>Welcome,</small>
+                <h4>{{ name }}</h4>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+    <!-- Stats -->
+
+    <section class="stats">
+
+        <div class="stat-card">
+            <h2>500+</h2>
+            <p>Career Paths</p>
+        </div>
+
+        <div class="stat-card">
+            <h2>2000+</h2>
+            <p>Students Guided</p>
+        </div>
+
+        <div class="stat-card">
+            <h2>1000+</h2>
+            <p>Internship Opportunities</p>
+        </div>
+
+    </section>
+    <!-- INTEREST SECTION -->
+
+<section class="interest-section">
+
+    <h2>Choose Your Interest</h2>
+
+    <p>
+        Select an area you are interested in and get personalized recommendations.
+    </p>
+
+    <div class="interest-grid">
+
+        <div class="interest-card">
+            <div class="icon purple">🤖</div>
+            <h3>AI / Machine Learning</h3>
+            <p>Build intelligent systems and shape the future.</p>
+           <a href="/recommendation/ai" class="explore-btn">
+    Explore
+</a>
+</a>
+        </div>
+
+        <div class="interest-card">
+            <div class="icon green">📊</div>
+            <h3>Data Science</h3>
+            <p>Extract insights from data and drive decisions.</p>
+            <a href="/recommendation/data-science" class="explore-btn">
+    Explore
+</a>
+</a>
+        </div>
+
+        <div class="interest-card">
+            <div class="icon blue">💻</div>
+            <h3>Web Development</h3>
+            <p>Create websites and web applications.</p>
+           <a href="/recommendation/web-development" class="explore-btn">
+    Explore
+</a>
+</a>
+        </div>
+
+        <div class="interest-card">
+            <div class="icon orange">🔐</div>
+            <h3>Cyber Security</h3>
+            <p>Protect systems and data in the digital world.</p>
+            <a href="/recommendation/cyber-security" class="explore-btn">
+    Explore
+</a>
+</a>
+        </div>
+
+        <div class="interest-card">
+            <div class="icon pink">🎨</div>
+            <h3>UI / UX Design</h3>
+            <p>Design beautiful and user-friendly experiences.</p>
+            <a href="/recommendation/ui-ux" class="explore-btn">
+    Explore
+</a>
+</a>
+        </div>
+
+        <div class="interest-card">
+            <div class="icon teal">📢</div>
+            <h3>Digital Marketing</h3>
+            <p>Promote brands and reach the right audience.</p>
+            <a href="/recommendation/digital-marketing" class="explore-btn">
+    Explore
+</a>
+</a>
+        </div>
+
+    </div>
+
+</section>
+<!-- POPULAR CAREERS -->
+
+<section class="popular-careers">
+
+    <div class="section-header">
+        <h2>🔥 Popular Career Paths</h2>
+        <a href="#">View All →</a>
+    </div>
+
+    <div class="career-grid">
+
+        <div class="career-card">
+            <h3>AI Engineer</h3>
+            <span>High Demand</span>
+        </div>
+
+        <div class="career-card">
+            <h3>Data Scientist</h3>
+            <span>High Demand</span>
+        </div>
+
+        <div class="career-card">
+            <h3>Full Stack Developer</h3>
+            <span>High Demand</span>
+        </div>
+
+        <div class="career-card">
+            <h3>Cyber Security Analyst</h3>
+            <span>High Demand</span>
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+</div>
+
+</body>
+</html>

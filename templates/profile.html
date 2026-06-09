@@ -1,0 +1,60 @@
+ <link rel="stylesheet"
+href="{{ url_for('static', filename='css/profile.css') }}">
+ <div class="profile-container">
+
+```
+<div class="profile-card">
+
+    <div class="profile-header">
+
+        <div class="profile-avatar">
+            {{ name[0] }}
+        </div>
+
+        <h2>{{ name }}</h2>
+
+        <p>{{ role }}</p>
+
+    </div>
+
+    <div class="profile-info">
+
+        <div class="info-box">
+            <h4>Email</h4>
+            <p>{{ email }}</p>
+        </div>
+
+        <div class="info-box">
+            <h4>Account Type</h4>
+            <p>{{ role }}</p>
+        </div>
+
+    </div>
+
+    <div class="stats-grid">
+
+        <div class="stat">
+            <h3>12</h3>
+            <p>Recommendations Viewed</p>
+        </div>
+
+        <div class="stat">
+            <h3>3</h3>
+            <p>Saved Careers</p>
+        </div>
+
+        <div class="stat">
+            <h3>80%</h3>
+            <p>Profile Completion</p>
+        </div>
+
+    </div>
+
+    <a href="/dashboard" class="back-btn">
+        ← Back to Dashboard
+    </a>
+
+</div>
+```
+
+</div>

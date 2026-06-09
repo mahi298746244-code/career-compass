@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Recommendations</title>
+
+
+<link rel="stylesheet"
+      href="{{ url_for('static', filename='css/recommendation.css') }}">
+
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="page-title">
+    <h1>🚀 Recommended Careers</h1>
+    <p>
+    Based on your interest in {{ interest }}
+</p>
+</div>
+
+
+<div class="career-grid">
+
+{% for career in careers %}
+
+    <div class="career-card">
+
+       <h3>{{ career }}</h3>
+
+<a href="/career/{{ career }}"
+   class="details-btn">
+
+   View Details
+
+</a>
+        <p class="demand">
+            High Demand
+        </p>
+
+    </div>
+
+{% endfor %}
+
+</div>
+<div class="skills-section">
+
+    <h2>📚 Required Skills</h2>
+
+    <div class="skills-list">
+
+        <div class="skill">Python</div>
+        <div class="skill">SQL</div>
+        <div class="skill">Machine Learning</div>
+        <div class="skill">Deep Learning</div>
+        <div class="skill">TensorFlow</div>
+        <div class="skill">Data Analysis</div>
+
+    </div>
+
+</div>
+
+<div class="internship-section">
+
+    <h2>💼 Recommended Internship Platforms</h2>
+
+    <div class="platform-list">
+
+        <div class="platform">Internshala</div>
+        <div class="platform">LinkedIn</div>
+        <div class="platform">Naukri</div>
+        <div class="platform">Wellfound</div>
+
+    </div>
+
+</div>
+
+<a href="/dashboard" class="back-btn">
+    ← Back to Dashboard
+</a>
+
+</div>
+
+</body>
+</html>
+
+
+<div class="internship-section">
+
+    
+</div>
+
+</body>
+</html>

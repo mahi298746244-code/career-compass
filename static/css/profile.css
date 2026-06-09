@@ -1,0 +1,134 @@
+ body{
+    background:#f5f6fc;
+    font-family:'Segoe UI',sans-serif;
+}
+
+.profile-container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+}
+
+.profile-card{
+
+    width:700px;
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:25px;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.08);
+}
+
+.profile-header{
+
+    text-align:center;
+
+    margin-bottom:35px;
+}
+
+.profile-avatar{
+
+    width:90px;
+    height:90px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    background:#5b3df5;
+
+    color:white;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:40px;
+    font-weight:bold;
+
+    margin-bottom:15px;
+}
+
+.profile-header h2{
+    color:#18104a;
+}
+
+.profile-header p{
+    color:#6b7280;
+}
+
+.profile-info{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:20px;
+
+    margin-bottom:30px;
+}
+
+.info-box{
+
+    background:#f8f9ff;
+
+    padding:20px;
+
+    border-radius:15px;
+}
+
+.info-box h4{
+    color:#5b3df5;
+    margin-bottom:8px;
+}
+
+.stats-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:20px;
+
+    margin-top:20px;
+}
+
+.stat{
+
+    background:#f8f9ff;
+
+    text-align:center;
+
+    padding:20px;
+
+    border-radius:15px;
+}
+
+.stat h3{
+    color:#5b3df5;
+    font-size:30px;
+}
+
+.back-btn{
+
+    display:inline-block;
+
+    margin-top:30px;
+
+    background:#5b3df5;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:12px 20px;
+
+    border-radius:10px;
+}

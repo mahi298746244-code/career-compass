@@ -1,0 +1,128 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Portal Registration</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Left Section -->
+    <div class="left-panel">
+        <div class="logo">
+            <i class="fa-solid fa-briefcase"></i>
+            <span>Career Portal</span>
+        </div>
+
+        <h1>Create <br> Your Future</h1>
+
+        <p>
+            Sign up and explore internships,
+             jobs and career opportunities.
+        </p>
+ <div class="girl-image">
+        <img src="{{ url_for('static', filename='images/career-girl.png') }}">
+    </div>
+        <div class="features">
+            <div class="feature">
+                <i class="fa-solid fa-rocket"></i>
+                <div>
+                    <h4>Find Opportunities</h4>
+                    <p>Discover internships and jobs.</p>
+                </div>
+            </div>
+
+            <div class="feature">
+                <i class="fa-solid fa-book"></i>
+                <div>
+                    <h4>Learn & Grow</h4>
+                    <p>Enhance your skills.</p>
+                </div>
+            </div>
+
+            <div class="feature">
+                <i class="fa-solid fa-bullseye"></i>
+                <div>
+                    <h4>Achieve Goals</h4>
+                    <p>Build your dream career.</p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+    <!-- Right Section -->
+    <div class="right-panel">
+        <h2>Registration</h2>
+
+        <form action="/register" method="post">
+
+            <div class="input-group">
+                <label>Full Name</label>
+                <input type="text" name="full_name" placeholder="Enter your full name" required>
+            </div>
+
+            <div class="input-group">
+                <label>Email Address</label>
+                <input type="email" name="email" placeholder="Enter your email" required>
+            </div>
+
+            <div class="input-group">
+                <label>Phone Number</label>
+                <input type="text" name="phone_number" placeholder="Enter phone number" required>
+            </div>
+
+            <div class="input-group">
+                <label>Password</label>
+                <input type="password" name="password" placeholder="Create password" required>
+            </div>
+
+            <div class="input-group">
+                <label>Confirm Password</label>
+                <input type="password" name="confirm_password" placeholder="Confirm password" required>
+            </div>
+
+            <div class="input-group">
+                <label>Select Role</label>
+                <select name="role" required>
+
+                     <option value="">Select Role</option>
+                     <option value="Student">Student</option>
+                     <option value="Mentor">Mentor</option>
+                </select>
+            </div>
+
+            <label class="checkbox">
+                <input type="checkbox">
+                I agree to Terms & Conditions
+            </label>
+
+            <button type="submit" class="register-btn">
+                Register
+            </button>
+
+            <div class="divider">OR</div>
+
+            <button type="button" class="google-btn">
+                <i class="fa-brands fa-google"></i>
+                Continue with Google
+            </button>
+
+            <p class="login-text">
+                Already have an account?
+                <a href="/login">Login</a>
+            </p>
+
+        </form>
+    </div>
+
+
+</div>
+
+
+</body>
+</html>
