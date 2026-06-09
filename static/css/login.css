@@ -190,7 +190,7 @@ text-align:center;
 width:60%;
 display:flex;
 justify-content:center;
-align-items:flex-start;
+align-items:center;
 background:#f8f9ff;
 padding-top:80px;
 }
@@ -198,9 +198,9 @@ padding-top:80px;
 .form-box{
 
     width:100%;
-    max-width:430px;
+    max-width:520px;
 
-    padding:45px;
+    padding:50px;
     margin:auto;
 
     background:white;
@@ -213,7 +213,7 @@ padding-top:80px;
     border:1px solid rgba(255,255,255,.6);
 }
 .form-box h2{
-font-size:45px;
+font-size:56px;
 line-height:1.2;
 font-weight:700;
 color:#020209;
@@ -434,3 +434,118 @@ line-height:1.1;
     }
 
 }
+ <!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Career Compass</title>
+
+```
+<link rel="stylesheet"
+      href="{{ url_for('static', filename='css/login.css') }}">
+```
+
+</head>
+
+<body>
+
+<div class="container">
+
+```
+<!-- LEFT SIDE -->
+
+<div class="left-panel">
+
+    <div class="logo">
+         Career Compass 🚀
+    </div>
+
+    <h1>
+        Navigate <br>
+        Your Future
+    </h1>
+
+    <p class="subtitle">
+        Discover the right tech career path, explore internship opportunities,
+        and get personalized guidance for your future.
+    </p>
+
+    <div class="features">
+
+        <div class="feature">
+            <span>🎯</span>
+            <p>Career Guidance</p>
+        </div>
+
+        <div class="feature">
+            <span>💼</span>
+            <p>Internship Opportunities</p>
+        </div>
+
+        <div class="feature">
+            <span>📚</span>
+            <p>skills Development</p>
+        </div>
+
+    </div>
+
+    <div class="illustration">
+        <img src="{{ url_for('static', filename='images/girlimage.jpg') }}"
+             alt="Career Illustration">
+    </div>
+
+</div>
+
+<!-- RIGHT SIDE -->
+
+<div class="right-panel">
+
+    <div class="form-box">
+        
+
+        <h2>Welcome Back </h2>
+
+        <p class="form-subtitle">
+            Login to continue your career journey
+        </p>
+
+        <form action="/login" method="POST">
+
+            <div class="input-group">
+                <label>Email Address</label>
+                <input type="email"
+                       name="email"
+                       placeholder="Enter your email"
+                       required>
+            </div>
+
+            <div class="input-group">
+                <label>Password</label>
+                <input type="password"
+                       name="password"
+                       placeholder="Enter your password"
+                       required>
+            </div>
+
+            <button type="submit" class="login-btn">
+                Login
+            </button>
+
+        </form>
+
+        <div class="register-link">
+            Don't have an account?
+            <a href="/register">Register</a>
+        </div>
+
+    </div>
+
+</div>
+```
+
+</div>
+
+</body>
+</html>

@@ -257,3 +257,24 @@ body{
         transform: translateY(0px);
     }
 }
+@media(max-width:768px){
+
+    .left-panel{
+        padding:30px 20px;
+    }
+
+    .left-panel h1{
+        font-size:48px;
+        line-height:1.1;
+    }
+
+    .left-panel img{
+        width:180px;
+    }
+
+    .register-card{
+        width:95%;
+        margin:auto;
+    }
+
+}
