@@ -1,4 +1,4 @@
- *{
+*{
 margin:0;
 padding:0;
 box-sizing:border-box;
@@ -17,6 +17,7 @@ linear-gradient(
 
 
 min-height:100vh;
+max-width:100%;
 color:white;
 
 
@@ -230,10 +231,10 @@ margin-bottom:10px;
 }
 @media (max-width:768px){
 
-    .stats-container{
+    .stats{
         display:grid;
         grid-template-columns:repeat(2,1fr);
-        gap:15px;
+        gap:13px;
         padding:20px;
     }
 
@@ -370,15 +371,8 @@ align-items:center;
 
 }
 
-.cta-left h2{
+ 
 
-
-font-size:48px;
-
-margin-bottom:15px;
-
-
-}
 
 .cta-left p{
 
@@ -654,12 +648,12 @@ line-height:1.7;
         width:100%;
     }
 
-    nav{
+    navbar{
         flex-direction:column;
         gap:15px;
     }
 
-    .nav-links{
+    .navbar-links{
         flex-wrap:wrap;
         justify-content:center;
     }
@@ -670,15 +664,13 @@ line-height:1.7;
     .hero{
         flex-direction:column;
     }
-
+    .hero-left h1{
+    font-size:42px !important;
+    line-height:1.2;
+}
+    
     .hero-right{
         display:none;
-    }
-
-    .stats-container{
-        display:grid;
-        grid-template-columns:repeat(2,1fr);
-        gap:15px;
     }
 
     .feature-grid{
@@ -689,4 +681,35 @@ line-height:1.7;
         font-size:52px !important;
     }
 
+
+    .stat-item{
+    width:45%;
+    text-align:center;
+    }
+    .get-started-btn{
+     position:static;
+     transform:none;
+     margin-top:20px;
+    }
+
+    .stat-box h2{
+      font-size:20px;
+   }
+   .nav-links{
+      display:none;
+   }
+
+   .nav-buttons{
+    display:none;
+   }
+
+   .cta-btn {
+        position: relative;
+        top: 230px;
+        right: 50%;
+        height: 50px;
+        width: 200px;
+        font-size: 15px;
+        white-space: nowrap;
+    }
 }
