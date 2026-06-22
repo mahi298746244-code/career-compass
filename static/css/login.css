@@ -429,3 +429,13 @@ line-height:1.1;
 
 }
 
+
+.error-message{
+background:#ffe5e5;
+color:#d90429;
+padding:12px;
+border-radius:8px;
+margin-bottom:15px;
+text-align:center;
+font-weight:600;
+}

@@ -26,6 +26,12 @@ def register():
         full_name = request.form['full_name']
         email = request.form['email']
         phone_number = request.form['phone_number']
+        if len(phone_number) != 10 or not phone_number.isdigit():
+         return "Phone number must contain exactly 10 digits"
+        if len(phone_number) != 10 or not phone_number.isdigit():
+         return "Invalid phone number"
+        if phone_number[0] not in ['6', '7', '8', '9']:
+         return "Enter a valid mobile number"
         password = request.form['password']
         confirm_password = request.form['confirm_password']
         role = request.form['role']
@@ -74,7 +80,10 @@ def login():
             session['role'] = user['role']
             return redirect('/dashboard')
 
-        return "Invalid Email or Password"
+        return render_template(
+    'login.html',
+    error="Invalid Email or Password"
+)
 
     return render_template('login.html')
 @app.route('/dashboard')
@@ -144,16 +153,27 @@ def recommendation(interest):
 
 @app.route('/profile')
 def profile():
-
+   
     if 'user_name' not in session:
         return redirect('/login')
 
+    conn = get_db_connection()
+
+    user = conn.execute(
+        "SELECT * FROM users WHERE email=?",
+        (session.get('email'),)
+    ).fetchone()
+
+    conn.close()
     return render_template(
         'profile.html',
-        name=session['user_name'],
-        email=session['email'],
-        role=session['role']
+        name=user['full_name'] if user else '',
+        email=user['email'] if user else '',
+        role=user['role'] if user else '',
+        recommendations=user['recommendations_viewed'] if user and 'recommendations_viewed' in user.keys() else None,
+        saved_careers=user['saved_careers'] if user and 'saved_careers' in user.keys() else None
     )
+
 
 @app.route('/career/<career_name>')
 def career_details(career_name):
@@ -253,7 +273,7 @@ def career_details(career_name):
             "skills": "Coming Soon",
             "companies": "Coming Soon"
         }
-
+        
     return render_template(
         "career_details.html",
         career_name=career_name,

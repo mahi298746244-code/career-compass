@@ -74,8 +74,17 @@
         <p class="form-subtitle">
             Login to continue your career journey
         </p>
-
+          
         <form action="/login" method="POST">
+
+          {% if error %}
+           <div class="error-message">
+             {{ error }}
+             </div>
+              {% endif %}
+
+<div class="input-group">
+</div>
 
             <div class="input-group">
                 <label>Email Address</label>
@@ -96,7 +105,8 @@
             <button type="submit" class="login-btn">
                 Login
             </button>
-
+            
+           
         </form>
 
         <div class="register-link">

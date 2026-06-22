@@ -2,7 +2,7 @@
 href="{{ url_for('static', filename='css/profile.css') }}">
  <div class="profile-container">
 
-```
+
 <div class="profile-card">
 
     <div class="profile-header">
@@ -34,17 +34,17 @@ href="{{ url_for('static', filename='css/profile.css') }}">
     <div class="stats-grid">
 
         <div class="stat">
-            <h3>12</h3>
+            <h3>{{ recommendations }}</h3>
             <p>Recommendations Viewed</p>
         </div>
 
         <div class="stat">
-            <h3>3</h3>
+            <h3>{{ saved_careers }}</h3>
             <p>Saved Careers</p>
         </div>
 
         <div class="stat">
-            <h3>80%</h3>
+            <h3>{{ completion }}%</h3>
             <p>Profile Completion</p>
         </div>
 
@@ -55,6 +55,6 @@ href="{{ url_for('static', filename='css/profile.css') }}">
     </a>
 
 </div>
-```
+
 
 </div>
